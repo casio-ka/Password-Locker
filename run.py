@@ -145,7 +145,7 @@ while True:
             print(' ')
             while True:
                 print("-"*100)
-                print('Navigation Codes: \n New Credential - (n) \n Display Credentials -(d) \n Exit -(e) ')
+                print('Navigation Codes: \n New Credential - (n) \n Display Credentials -(d) \n Delete Credential -(dc) \n Exit -(e) ')
                 options = input("Enter a choice: ").lower().strip()
                 print("-"*180)
                 if options == 'e':
@@ -199,6 +199,12 @@ while True:
                         print("You don't seem to have any credentials saved yet")
                         print(' ')
                         break
+                elif options == 'dc':
+                    print(' ')
+                    choice_d = print('Enter account name of credential you wish to delete: ')
+                    del_account(choice_d)
+
+
                 else:
                     print ("Invalid Option, Goodbye")
 
