@@ -60,21 +60,21 @@ class User: # Class for all User Information
 
  # Class for all Credentials
 class Credentials:
-    """
+    '''
     Class that generates new instances of Credentials accounts.
-    """
+    '''
     #Empty Credentials list
     accounts = []
     @classmethod
     def check_user(cls,full_name,password):
-		'''
-		Method that checks if the name and password entered match entries in the users_list
-		'''
-		current_user = ''
-		for User in User.user_list:
-			if (User.full_name == full_name and User.password == password):
-				current_user = User.full_name
-		return current_user
+        '''
+        Method that checks if name and password entered match entries in the user_list
+        '''
+        current_user=''
+        for user in User.user_list:
+            if(user.full_name == full_name and user.password == password):
+                current_user = user.full_name
+                return current_user
 
     def __init__(self,account_name,user_account,account_password):
         '''
@@ -98,8 +98,7 @@ class Credentials:
         '''
 
         Credentials.accounts.remove(self)
-
-#-------------------------------------------------------
+    
     @classmethod
     def account_exist(cls,email):
         '''
@@ -110,7 +109,7 @@ class Credentials:
             Boolean: True or false depending if the contact exists
         '''
         for account in cls.accounts:
-            if account.account_user == email:
+            if account.user_account == email:
                     return True
 
         return False
