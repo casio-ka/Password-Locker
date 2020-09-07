@@ -21,7 +21,7 @@ class TestCredentials(unittest.TestCase):
         Set up method to run before each test cases.
         '''
         # create user object
-        self.new_account = Credentials("WhatsApp","daudi","password")
+        self.new_account = Credentials("Youtube","Wainaina","password")
 
 
     def tearDown(self):
@@ -35,9 +35,9 @@ class TestCredentials(unittest.TestCase):
         test_init test case to test if the object is initialized properly
         '''
 
-        self.assertEqual(self.new_account.user_account_name,"WhatsApp")
-        self.assertEqual(self.new_account.user_account_user,"daudi")
-        self.assertEqual(self.new_account.user_account_password,"password")
+        self.assertEqual(self.new_account.account_name,"Youtube")
+        self.assertEqual(self.new_account.user_account,"Wainaina")
+        self.assertEqual(self.new_account.account_password,"password")
 
 
     def test_save_account(self):
@@ -56,7 +56,7 @@ class TestCredentials(unittest.TestCase):
         objects to our accounts
         '''
         self.new_account.save_account()
-        test_account = Credentials("WhatsApp","daudi","password") # new account
+        test_account = Credentials("WhatsApp","Wainaina","password") # new account
         test_account.save_account()
         self.assertEqual(len(Credentials.accounts),2)
 
@@ -75,21 +75,6 @@ class TestCredentials(unittest.TestCase):
 
 
 
-    def test_find_account_by_number(self):
-            '''
-            test to check if we can find a account by phone number and display information
-            '''
-
-            self.new_account.save_account()
-            test_account = Credentials("Test","anum","password") # new account
-            test_account.save_account()
-
-            found_account = Credentials.find_by_number("anum")
-
-            self.assertEqual(found_account,Credentials.find_by_number("anum"))
-
-
-
     # Test if account exist
     def test_account_exists(self):
             '''
@@ -97,10 +82,10 @@ class TestCredentials(unittest.TestCase):
             '''
 
             self.new_account.save_account()
-            test_account = Credentials("Viber","daudi","12345") # new account
+            test_account = Credentials("Google","Wainaina","12345") # new account
             test_account.save_account()
 
-            account_exists = Credentials.account_exist("daudi")
+            account_exists = Credentials.account_exist("Wainaina")
 
             self.assertTrue(account_exists)
 
