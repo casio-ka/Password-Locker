@@ -76,13 +76,13 @@ class Credentials:
 				current_user = User.full_name
 		return current_user
 
-    def __init__(self,account_name,account_user,account_password):
+    def __init__(self,account_name,user_account,account_password):
         '''
         Class that generates new instances of users.
         '''
         self.account_name = account_name
-        self.user_account_user = account_user
-        self.user_account_password = account_password
+        self.user_account = user_account
+        self.account_password = account_password
 
     def save_account(self):
         '''
@@ -99,7 +99,7 @@ class Credentials:
 
         Credentials.accounts.remove(self)
 
-
+#-------------------------------------------------------
     @classmethod
     def account_exist(cls,email):
         '''
