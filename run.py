@@ -81,7 +81,13 @@ def del_account(account):
     '''
     Function to delete a account
     '''
-    account.account_dele()
+    account.account_delete()
+
+def copy_credential(account):
+    '''
+    Function to copy credential details to clipboard
+    '''
+    return Credentials.copy_credential(account)
 
 
 # MAIN FUNCTION
@@ -145,7 +151,7 @@ while True:
             print(' ')
             while True:
                 print("-"*100)
-                print('Navigation Codes: \n New Credential - (n) \n Display Credentials -(d) \n Delete Credential -(dc) \n Exit -(e) ')
+                print('Navigation Codes: \n New Credential - (n) \n Display Credentials -(d) \n Delete Credential -(dc) \n Copy Credential -(c) \n Exit -(e) ')
                 options = input("Enter a choice: ").lower().strip()
                 print("-"*180)
                 if options == 'e':
@@ -199,12 +205,17 @@ while True:
                         print("You don't seem to have any credentials saved yet")
                         print(' ')
                         break
+                elif options == 'c':
+                    print(' ')
+                    choice_c = print('Please enter account name of credential you wish to copy: ')
+                    copy_credential(choice_c)
+                    print(' ')
+                    break    
                 elif options == 'dc':
                     print(' ')
                     choice_d = print('Enter account name of credential you wish to delete: ')
                     del_account(choice_d)
-
-
+                    breaks
                 else:
                     print ("Invalid Option, Goodbye")
 
