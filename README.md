@@ -33,7 +33,7 @@ To Contribute:
 2. Clone this repo to your machine:https://github.com/casio-ka/Password-Locker.git
 
 # Contact Information
-Wainaina Kasyoka
+Wainaina Kasyoka - [Gmail](mailto:wainainakasyoka@gmail.com)
 
 # License and Copyright Information
 
