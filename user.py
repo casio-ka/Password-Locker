@@ -104,7 +104,7 @@ class Credentials:
         '''
         Method that checks if a contact exists from the user list.
         Args:
-            number: Email to search if it exists
+            email: Email to search if it exists
         Returns :
             Boolean: True or false depending if the contact exists
         '''
