@@ -47,10 +47,7 @@ def display_users():
     '''
     return User.display_users()
 
-
-"""
-Credentials
-"""
+# Credentials
 
 def create_account(account_name,user_account,account_password):
     '''
@@ -87,9 +84,8 @@ def del_account(account):
     account.account_dele()
 
 
-"""
-MAIN FUNCTION
-"""
+# MAIN FUNCTION
+
 def main():
         print("Thanks for Using Password Locker App.")
 
@@ -113,8 +109,6 @@ while True:
         password = getpass.getpass('Enter your password : ').strip()
         full_name=input("Enter Full Name : ").strip()
         email = input("Enter Email : ")
-
-        curUserName=user_name
 
         print("Thank you for using our service")
 
