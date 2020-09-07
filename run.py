@@ -94,7 +94,7 @@ while True:
     columns = shutil.get_terminal_size().columns
     print("WELCOME TO:".center(columns))
     print("PASSWORD LOCKER".center(columns))
-    print("-"*100)
+    print("-"*180)
 
 
     print(" Use these codes to navigate: \n Login =(l) \n Create Account=(c) \n Quit - (q)")
@@ -136,8 +136,8 @@ while True:
         Open User File as read only and append new authentication
         user_get_info_file = open("login.txt","r")
         """
-        user_name = input("Enter user name")
-        password=getpass.getpass("Enter password")
+        user_name = input("Enter user name: ")
+        password=getpass.getpass("Enter password: ")
         found_user = check_existing_users(user_name,password)
         if found_user and password:
             print(" ")
@@ -147,7 +147,7 @@ while True:
                 print("-"*100)
                 print('Navigation Codes: \n New Credential - (n) \n Display Credentials -(d) \n Exit -(e) ')
                 options = input("Enter a choice: ").lower().strip()
-                print("-"*100)
+                print("-"*180)
                 if options == 'e':
                     print(" ")
                     print(f'Goodbye {user_name}')
@@ -159,10 +159,10 @@ while True:
                     user_account=input("Enter you account\'s name : ").strip()
                     while True:
                         print(' ')
-                        print("-"*100)
+                        print("-"*180)
                         print('Please choose an option for entering a password: \n Enter Existing Password (p) \n Generate Password -(g) \n Exit -(e)')
                         p_choice = input('Enter an option: ').lower().strip()
-                        print("-"*100)
+                        print("-"*180)
                         if p_choice == 'p':
                             print(" ")
                             account_password = getpass.getpass('Enter your password: ').strip()
